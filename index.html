@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="t.js"></script>
+		<script id="testTemplate" type="text/template">
+			<ul>
+			<%for(good of goods){%>
+				<li>
+				{{good}}
+				</li>	
+			<%}%>
+			</ul>
+			
+		</script>
+		
+		<script>
+			
+			let html=t("testTemplate",{
+				goods:["a","b","c"]
+			});
+			document.body.innerHTML=html;
+			
+		</script>
+	</body>
+</html>
